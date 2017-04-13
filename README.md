@@ -1,7 +1,7 @@
 My Windows Media Player
 ===================
 
-Ce dépôt contient les sources du Windows Media Player de mon groupe pour le module .NET de 3e année à Epitech.
+Ce dépôt contient les sources du Windows Media Player de mon groupe (Antoine Buchser, François Kiene, Thomas Moritz et moi même) pour le module .NET de 3e année à Epitech.
 Il a été réalisé à Strasbourg en 2016.
 
 ----------
