@@ -1,0 +1,19 @@
+<playlists>
+  <playlist name="Musique">
+    <media path="E:\C# - MyWindowsMediaPlayer\Example Medias\Music1.mp3" />
+    <media path="E:\C# - MyWindowsMediaPlayer\Example Medias\MusicInfos1.mp3" />
+    <media path="E:\Projets\CS - MyWindowsMediaPlayer\Example Medias\1-Rock N' Roll Train.mp3" />
+    <media path="E:\Projets\CS - MyWindowsMediaPlayer\Example Medias\15-Black Ice.mp3" />
+    <media path="E:\C# - MyWindowsMediaPlayer\Example Medias\07 - You Shook Me All Night Long.mp3" />
+  </playlist>
+  <playlist name="Films">
+    <media path="E:\Projets\CS - MyWindowsMediaPlayer\Example Medias\Video1.mp4" />
+  </playlist>
+  <playlist name="Séries">
+    <media path="E:\Projets\CS - MyWindowsMediaPlayer\Example Medias\Video3.mp4" />
+  </playlist>
+  <playlist name="Photos">
+    <media path="E:\Projets\CS - MyWindowsMediaPlayer\Example Medias\290066_1241107119_large.jpg" />
+    <media path="E:\Projets\CS - MyWindowsMediaPlayer\Example Medias\6546456_460s_v1.jpg" />
+  </playlist>
+</playlists>

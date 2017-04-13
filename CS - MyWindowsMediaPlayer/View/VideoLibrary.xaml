@@ -1,0 +1,39 @@
+﻿<Page x:Class="MyWindowsMediaPlayer.View.VideoLibrary"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyWindowsMediaPlayer.View"
+      xmlns:viewmodel="clr-namespace:MyWindowsMediaPlayer.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="VideoLibrary">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Content="Modifier la bibliothèque" Command="{Binding ManageLibraryCommand}" Grid.Row="0" Margin="5,5,5,0" />
+        <DataGrid Name="MediaList" Grid.Row="2" ItemsSource="{Binding Path=Library.ItemsAsVideo, UpdateSourceTrigger=PropertyChanged}"
+                  AutoGenerateColumns="False" IsReadOnly="True" AlternationCount="2" RowHeaderWidth="0" GridLinesVisibility="None" BorderThickness="0"
+                  ColumnHeaderStyle="{DynamicResource DataGridHeader}" RowStyle="{DynamicResource DataGridRow}" CellStyle="{DynamicResource DataGridCell}" Margin="5,0,5,5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" Header="NOM" Width="*" />
+                <DataGridTemplateColumn Width="30">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding ElementName=MediaList, Path=DataContext.AddToPlaylistCommand}" CommandParameter="{Binding}" VerticalAlignment="Center" Background="Transparent" BorderThickness="0">
+                                <Image x:Name="imgAdd" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Source="/CS - MyWindowsMediaPlayer;component/Assets/add.png"/>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <DataGrid.InputBindings>
+                <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding Path=SelectMediaCommand}" CommandParameter="{Binding ElementName=MediaList, Path=SelectedItem}" />
+            </DataGrid.InputBindings>
+        </DataGrid>
+    </Grid>
+</Page>

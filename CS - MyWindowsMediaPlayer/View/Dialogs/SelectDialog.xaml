@@ -1,0 +1,31 @@
+﻿<Window x:Class="MyWindowsMediaPlayer.View.Dialogs.SelectDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWindowsMediaPlayer.View.Dialogs"
+        mc:Ignorable="d"
+        Title="SelectDialog" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Width="300">
+            <TextBlock x:Name="Label" Margin="5,5,5,0" />
+            <ListBox x:Name="Items" Grid.Row="1" HorizontalContentAlignment="Stretch" MinHeight="200" MaxHeight="400" Margin="5">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="20" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding}" VerticalAlignment="Center" />
+                            <Button Grid.Column="1" Tag="{Binding}" Click="SelectButton_Click" VerticalAlignment="Center" Background="Transparent" BorderThickness="0">
+                                <Image x:Name="imgValidate" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Source="/CS - MyWindowsMediaPlayer;component/Assets/validate.png"/>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Annuler" Height="24" Click="CancelButton_Click" Margin="5" />
+        </StackPanel>
+    </Grid>
+</Window>

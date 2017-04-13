@@ -1,0 +1,36 @@
+﻿<Application x:Class="MyWindowsMediaPlayer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MyWindowsMediaPlayer"
+             xmlns:view="clr-namespace:MyWindowsMediaPlayer.View"
+             xmlns:viewmodel="clr-namespace:MyWindowsMediaPlayer.ViewModel"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type viewmodel:PlaylistListVM}">
+                <view:PlaylistList />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodel:MusicLibraryVM}">
+                <view:MusicLibrary />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodel:LibraryManagementVM}">
+                <view:LibraryManagement />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodel:VideoLibraryVM}">
+                <view:VideoLibrary />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodel:ImageLibraryVM}">
+                <view:ImageLibrary />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodel:PlaylistVM}">
+                <view:Playlist />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodel:TwitterLoginVM}">
+                <view:TwitterLogin />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

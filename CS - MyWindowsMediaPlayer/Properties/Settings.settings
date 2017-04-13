@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MyWindowsMediaPlayer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TwitterToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TwitterAccess" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TwitterAccessSecret" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PlaylistsPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyWindowsMediaPlayer_buchse_a\playlists.xml</Value>
+    </Setting>
+    <Setting Name="LibrariesPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyWindowsMediaPlayer_buchse_a\libraries.xml</Value>
+    </Setting>
+    <Setting Name="AppDataFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyWindowsMediaPlayer_buchse_a</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
